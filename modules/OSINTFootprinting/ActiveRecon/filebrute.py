@@ -29,8 +29,8 @@ properties = {}
 
 def filebrute(web):
 
-    print(GR+' [*] Loading module...')
-    print(B+" [!] Module Selected : "+C+"Bruteforce Modules\n\n")
+    print(f'{GR} [*] Loading module...')
+    print(f"{B} [!] Module Selected : {C}" + "Bruteforce Modules\n\n")
     time.sleep(0.7)
     #print(R+'\n    ==================================')
     #print(R+'     B R U T E F O R C E   R E C O N.')
@@ -39,64 +39,64 @@ def filebrute(web):
     posintact("bruteforce recon") 
 
     print(O+' Choose from the following options :\n')
-    print(B+'  [1]'+C+' Common Backdoor Paths '+W+' (.shell, c99.php, etc)')
-    print(B+'  [2]'+C+' Common Backup Locations'+W+' (.bak, .db, etc)')
-    print(B+'  [3]'+C+' Common Dot Files'+W+' (.phpinfo, .htaccess, etc)')
-    print(B+'  [4]'+C+' Common Password Paths'+W+' (.skg, .pgp etc)')
-    print(B+'  [5]'+C+' Common Proxy Config. Locations'+W+' (.pac, etc)')
-    print(B+'  [6]'+C+' Multiple Index Locations'+W+' (index1, index2, etc)')
-    print(B+'  [7]'+C+' Common Log Locations'+W+' (.log, changelogs, etc)\n')
-    print(B+'  [A]'+C+' The Auto-Awesome Module\n')
-    print(B+'  [99]'+C+' Back\n')
+    print(f'{B}  [1]{C} Common Backdoor Paths {W} (.shell, c99.php, etc)')
+    print(f'{B}  [2]{C} Common Backup Locations{W} (.bak, .db, etc)')
+    print(f'{B}  [3]{C} Common Dot Files{W} (.phpinfo, .htaccess, etc)')
+    print(f'{B}  [4]{C} Common Password Paths{W} (.skg, .pgp etc)')
+    print(f'{B}  [5]{C} Common Proxy Config. Locations{W} (.pac, etc)')
+    print(f'{B}  [6]{C} Multiple Index Locations{W} (index1, index2, etc)')
+    print(f'{B}  [7]{C} Common Log Locations{W}' + ' (.log, changelogs, etc)\n')
+    print(f'{B}  [A]{C}' + ' The Auto-Awesome Module\n')
+    print(f'{B}  [99]{C}' + ' Back\n')
     time.sleep(0.3)
-    v = input(C+'  [§] TID'+C+' :> ' + color.END)
+    v = input(f'{C}  [§] TID{C} :> {color.END}')
     print('')
     if v.strip() == '1':
-        print(B+' [!] Type Selected :'+C+' Backdoor Brute')
+        print(f'{B} [!] Type Selected :{C} Backdoor Brute')
         backbrute(web)
-        input(C+' [§] Press '+GR+'Enter'+C+' to continue...')
+        input(f'{C} [§] Press {GR}Enter{C} to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '2':
-        print(B+' [!] Type Selected :'+C+' Backup Brute')
+        print(f'{B} [!] Type Selected :{C} Backup Brute')
         backupbrute(web)
-        input(C+' [§] Press '+GR+'Enter'+C+' to continue...')
+        input(f'{C} [§] Press {GR}Enter{C} to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '3':
-        print(B+' [!] Type Selected :'+C+' Dot File Brute')
+        print(f'{B} [!] Type Selected :{C} Dot File Brute')
         dotbrute(web)
-        input(C+' [§] Press '+GR+'Enter'+C+' to continue...')
+        input(f'{C} [§] Press {GR}Enter{C} to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '4':
-        print(B+' [!] Type Selected :'+C+' Password Brute')
+        print(f'{B} [!] Type Selected :{C} Password Brute')
         passbrute(web)
-        input(C+' [§] Press '+GR+'Enter'+C+' to continue...')
+        input(f'{C} [§] Press {GR}Enter{C} to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '5':
-        print(B+' [!] Type Selected :'+C+' Proxy Brute')
+        print(f'{B} [!] Type Selected :{C} Proxy Brute')
         proxybrute(web)
-        input(C+' [§] Press '+GR+'Enter'+C+' to continue...')
+        input(f'{C} [§] Press {GR}Enter{C} to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '6':
-        print(B+' [!] Type Selected :'+C+' Multiple Indices')
+        print(f'{B} [!] Type Selected :{C} Multiple Indices')
         indexmulbrute(web)
-        input(C+' [§] Press '+GR+'Enter'+C+' to continue...')
+        input(f'{C} [§] Press {GR}Enter{C} to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '7':
-        print(B+' [!] Type Selected :'+C+' Log Locations')
+        print(f'{B} [!] Type Selected :{C} Log Locations')
         logbrute(web)
-        input(C+' [§] Press '+GR+'Enter'+C+' to continue...')
+        input(f'{C} [§] Press {GR}Enter{C}' + ' to continue...')
         print('\n\n')
         filebrute(web)
 
